@@ -74,7 +74,7 @@
   ;; assuming that some token is passed as a query parameter
   (let [token (some->> (.get (.getParameterMap request) "token")
                        first)]
-    (if (= token "token") ;; TODO real auth
+    (if (= token "some-value") ;; TODO real auth
       (assoc-in context [:request :lacinia-app-context :request :auth-info]
         {:user-id 1234} ;; TODO set this to pass data to resolver
         )
@@ -110,7 +110,7 @@
                                                  ;; subs can be authenticated by an initial message
                                                  ;; here we force the IDE to pass this as initial message
                                                  ;; is received by stream resolver in (:com.walmartlabs.lacinia/connection-params context)
-                                                 :ide-connection-params {"token" "some-valuex"}
+                                                 :ide-connection-params {"token" "some-value"}
                                                  })
                                 :route-name ::graphiql-ide]}
                              (lp/graphiql-asset-routes asset-path))
