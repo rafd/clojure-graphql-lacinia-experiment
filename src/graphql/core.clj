@@ -8,9 +8,9 @@
     [graphql.pubsub :as pubsub]))
 
 (defonce chatrooms
-  (atom {1 {:title "Unifize"
+  (atom {1 {:title "Abc"
             :id 1}
-         2 {:title "Admin"
+         2 {:title "Xyz"
             :id 2}}))
 
 (defn chatroom-by-id
